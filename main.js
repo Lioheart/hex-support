@@ -53,9 +53,9 @@ Hooks.once("init", () => {
 
   // Change circle and cone measured templates to a hexagonal shape
   libWrapper.register("hex-support", "MeasuredTemplate.prototype._computeShape", function(wrapped) {
+    const result = wrapped();
     const {angle: direction, distance} = this.ray;
     const gridType = game.scenes.current.grid.type;
-    const result = wrapped();
     if (gridType >= 2) {
       switch (this.document.t) {
         case "circle":
