@@ -73,7 +73,7 @@ Hooks.once("init", () => {
    * Get a Hexagonal area of effect given a direction and distance
    * @param {number} direction
    * @param {number} distance
-   * @returns 
+   * @returns {PIXI.Polygon}
    */
   MeasuredTemplate.getHexShape = function(direction, distance) {
     const points = Array.fromRange(6)
