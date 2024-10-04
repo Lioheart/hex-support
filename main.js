@@ -105,7 +105,7 @@ Hooks.once("init", () => {
     // Get the cone shape as a polygon
     const points = angles.map(a => {
       const distanceSolveAngle = Math.abs((a + (column ? thirdPI/2 : 0)) % thirdPI);
-      return Ray.fromAngle(0, 0, a, (sqrt3*distance) / (sqrt3*Math.cos(distanceSolveAngle)+Math.sin(distanceSolveAngle)));
+      return Ray.fromAngle(0, 0, a, (sqrt3*distance) / (sqrt3*Math.cos(distanceSolveAngle)+Math.sin(distanceSolveAngle)) +1);
     })
     .reduce((arr, r) => arr.concat([r.B.x, r.B.y]), [0, 0]);
     return new PIXI.Polygon(points);
