@@ -46,10 +46,10 @@ Hooks.once("init", () => {
     default: 60
   });
 
-  // Override the default angle for cones
-  libWrapper.register("hex-support", "TemplateLayer.prototype._onDragLeftStart", function(wrapped, event) {
-    return wrapped(event).then(value => value.document.angle = game.scenes.current.grid.type >= 2 ? game.settings.get("hex-support", "angleOverride") : CONFIG.MeasuredTemplate.defaults.angle);
-  }, "WRAPPER");
+  // Override the default angle for cones in scenes with a hex grid
+  Object.defineProperty(CONFIG.MeasuredTemplate.defaults, "angle", {
+    get: function() {return game.scenes.current.grid.type >= 2 ? game.settings.get("hex-support", "angleOverride") : 53.13}
+  });
 
   // Change circle and cone measured templates to a hexagonal shape
   libWrapper.register("hex-support", "MeasuredTemplate.prototype._computeShape", function(wrapped) {
