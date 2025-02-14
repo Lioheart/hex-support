@@ -1,0 +1,9 @@
+{
+"hex-support.AngleOverrideName": "Kąt stożka siatki heksagonalnej",
+"hex-support.AngleOverrideHint": "Ustawia domyślny kąt szablonów stożków w scenach z siatką heksadecymalną.",
+"hex-support.CircleHexName": "Okręgi do sześciokątów",
+"hex-support.CircleHexHint": "Zmiana szablonów okręgów na sześciokąty w scenach z siatką heksagonalną.",
+"hex-support.ConeHexName": "Końcówki stożkowe w kształcie sześciokąta",
+"hex-support.ConeHexHint": "Szablony stożków w scenach z siatką heksagonalną będą miały punkty końcowe w kształcie sześciokąta.",
+"hex-support.MeasureHex": "Szablon sześciokątny"
+}
